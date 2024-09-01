@@ -1,5 +1,5 @@
-"use client"
-
+'use client'
+import React from 'react'
 import { AreaChart } from "./AreaChart"
 
 const chartdata = [
@@ -65,8 +65,9 @@ const chartdata = [
   },
 ]
 
-export const AreaChartHero = () => (
- <div className="flex justify-center py 20">
+const AreaChartHero = () => {
+return(
+  <div className="flex justify-center py 20">
         <AreaChart
             className="h-80"
             data={chartdata}
@@ -78,5 +79,8 @@ export const AreaChartHero = () => (
             onValueChange={(v) => console.log(v)}
         />
  </div>   
-
 )
+
+}
+
+export default AreaChartHero

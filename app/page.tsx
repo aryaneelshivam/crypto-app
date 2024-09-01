@@ -11,7 +11,8 @@ import { auth, currentUser } from '@clerk/nextjs/server'
 import NavBar from "./components/NavBar";
 import HeroElement from "./components/hero";
 import StatsElement from "./components/StatsElement";
-import { AreaChartHero } from "./components/ChartElem";
+import { Area } from "recharts";
+import AreaChartHero from "./components/ChartElem";
 
 export default function Home() {
   const { userId } = auth()
@@ -27,8 +28,8 @@ export default function Home() {
       <main>
          <HeroElement></HeroElement>
          <StatsElement></StatsElement>
-         <div className="flex justify-center px-20">
-            <AreaChartHero></AreaChartHero>
+         <div className="px-20">
+          <AreaChartHero></AreaChartHero>
          </div>
 
       </main>
